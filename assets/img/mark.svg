@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 80" role="img" aria-label="High Water Designs">
+  <defs><clipPath id="staff"><rect x="13" y="3" width="26" height="74" rx="5"/></clipPath></defs>
+  <rect x="13" y="3" width="26" height="74" rx="5" fill="#FFF8EC"/>
+  <path clip-path="url(#staff)" fill="#24607A" d="M0 27q6.5-6 13 0t13 0t13 0t13 0V80H0z"/>
+  <g stroke="#3B2F2A" stroke-width="2.6" stroke-linecap="round">
+    <path d="M13 11h13M13 19h7M13 35h7M13 43h13M13 51h7M13 59h7M13 67h13"/>
+  </g>
+  <path clip-path="url(#staff)" d="M0 27q6.5-6 13 0t13 0t13 0t13 0" fill="none" stroke="#3B2F2A" stroke-width="2.6"/>
+  <rect x="13" y="3" width="26" height="74" rx="5" fill="none" stroke="#3B2F2A" stroke-width="3"/>
+</svg>
