@@ -1,0 +1,6 @@
+{
+  "format": 1,
+  "packs": [
+    { "id": "winter_specials", "title": "Winter Specials", "version": 1, "url": "packs/winter_specials_v1.json", "sha256": "146a883f889d25102085b84f8691a738bad3924a8523347b3edabf0a41304dd5", "minAppVersion": "0.1.0", "first": 301, "count": 10 }
+  ]
+}

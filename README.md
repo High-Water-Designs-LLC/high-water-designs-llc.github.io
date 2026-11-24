@@ -17,6 +17,7 @@ Fonts are self-hosted, so the site sets no cookies and sends nothing to Google.
 | `/support/` | Player support and FAQ, data deletion (`#delete-data`) | this repo |
 | `/press/` | Press kit | this repo |
 | `/404.html` | Not-found page | this repo |
+| `/packs/index.json`, `/packs/packs/*.json` | Remote level packs for Restock Rush (FR-15). Remote config `remote_packs_url` = `https://high-water-designs-llc.github.io/packs/index.json` (switch to highwaterdesigns.com with DNS) | **RestockRush repo** `Tools/RemotePacks/site/`, copied verbatim; see its README |
 | `/assets/` | `css/site.css`, `fonts/` (Fredoka, Baloo 2, OFL licences beside them), `img/mark.svg`, `img/og-studio.png` (link preview) | this repo |
 | `/restockrush/og-restockrush.png` | Link preview image for the game and press pages (1200x630) | this repo |
 
