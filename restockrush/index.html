@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Restock Rush: shop sort puzzle for Android</title>
+<meta name="description" content="Sort goods from the delivery belt, match three to clear, and fill every customer's order. No ads in the middle of a level, no level timer, no energy.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/baloo2-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<meta property="og:title" content="Restock Rush: shop sort puzzle for Android">
+<meta property="og:description" content="Sort goods from the delivery belt, match three to clear, and fill every customer's order. No ads in the middle of a level, no level timer, no energy.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFF8EC">
+</head>
+<body class="rr">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/mark.svg" width="26" height="40" alt=""><span>High Water Designs</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/restockrush/" aria-current="page">Restock Rush</a>
+      <a href="/support/">Support</a>
+      <a href="/press/">Press</a>
+    </nav>
+  </div>
+</header>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="tk-star" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="9" fill="#F2B632" stroke="#3B2F2A" stroke-width="2.5"/><polygon points="20.0,10.5 22.7,17.3 30.0,17.8 24.4,22.4 26.2,29.5 20.0,25.6 13.8,29.5 15.6,22.4 10.0,17.8 17.3,17.3" fill="#3B2F2A"/></symbol>
+    <symbol id="tk-heart" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="9" fill="#D9503F" stroke="#3B2F2A" stroke-width="2.5"/><path d="M20 30C10 23 10 13 15.5 13c2.5 0 4 2 4.5 3.5c.5-1.5 2-3.5 4.5-3.5C30 13 30 23 20 30z" fill="#3B2F2A"/></symbol>
+    <symbol id="tk-ring" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="9" fill="#9CC3E0" stroke="#3B2F2A" stroke-width="2.5"/><circle cx="20" cy="20" r="7" fill="none" stroke="#3B2F2A" stroke-width="3.6"/></symbol>
+    <symbol id="tk-diamond" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="9" fill="#3FA66B" stroke="#3B2F2A" stroke-width="2.5"/><polygon points="20,10 29,20 20,30 11,20" fill="#3B2F2A"/></symbol>
+    <symbol id="tk-empty" viewBox="0 0 40 40"><rect x="3" y="3" width="34" height="34" rx="9" fill="#FFF8EC" fill-opacity=".45" stroke="#3B2F2A" stroke-width="2" stroke-dasharray="5 4"/></symbol>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3B2F2A"/></marker>
+  </defs>
+</svg>
+<main id="main">
+  <section class="rr-hero">
+    <div class="wrap">
+      <div class="copy">
+        <span class="label">A shop sort puzzle for Android</span>
+        <h1 class="rr-title">Restock <span>Rush</span></h1>
+        <p class="lede">Sort goods from the delivery belt onto your shelves, match three of a kind to clear them, and fill every customer's order before their patience runs out.</p>
+        <div class="btn-row">
+          <!-- STORE BADGE: when the Play listing is live, replace this span with the official
+               "Get it on Google Play" badge (https://play.google.com/intl/en_us/badges/) linking to
+               https://play.google.com/store/apps/details?id=<package> . Badge rules: don't recolour or crop it. -->
+          <span class="btn" aria-disabled="true" id="store-badge">Coming soon on Google Play</span>
+          <a class="btn ghost" href="/press/">Press kit</a>
+        </div>
+        <p class="store-note">Free to play, with ads between levels and optional in-app purchases.</p>
+      </div>
+      <!-- TRAILER SLOT: when the WP-20a capture exists, replace the inline illustration in .screen with
+           <video src="/restockrush/media/trailer.mp4" poster="/restockrush/media/trailer-poster.jpg" autoplay muted loop playsinline></video> -->
+      <div class="phone" id="trailer"><div class="screen"><svg viewBox="0 0 240 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of the Restock Rush board: a customer order at the top, three wooden shelves of goods, and the delivery belt at the bottom">
+  <rect width="240" height="500" fill="#A9BFA0"/>
+  <rect y="392" width="240" height="108" fill="#B98A5E"/>
+  <path d="M0 392h240" stroke="#3B2F2A" stroke-width="2.5"/>
+  <g>
+    <rect x="52" y="34" width="136" height="62" rx="16" fill="#FFF8EC" stroke="#3B2F2A" stroke-width="2.5"/>
+    <path d="M110 95l10 14l10-14" fill="#FFF8EC" stroke="#3B2F2A" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M111 94h18" stroke="#FFF8EC" stroke-width="4"/>
+    <use href="#tk-heart" x="64" y="47" width="34" height="34"/>
+    <use href="#tk-star" x="103" y="47" width="34" height="34"/>
+    <use href="#tk-ring" x="142" y="47" width="34" height="34"/>
+  </g>
+  <g>
+    <use href="#tk-star" x="34" y="152" width="46" height="46"/>
+    <use href="#tk-star" x="97" y="152" width="46" height="46"/>
+    <use href="#tk-empty" x="160" y="152" width="46" height="46"/>
+    <rect x="18" y="198" width="204" height="13" rx="3" fill="#B98A5E" stroke="#3B2F2A" stroke-width="2.5"/>
+    <use href="#tk-heart" x="34" y="232" width="46" height="46"/>
+    <use href="#tk-ring" x="97" y="232" width="46" height="46"/>
+    <use href="#tk-diamond" x="160" y="232" width="46" height="46"/>
+    <rect x="18" y="278" width="204" height="13" rx="3" fill="#B98A5E" stroke="#3B2F2A" stroke-width="2.5"/>
+    <use href="#tk-ring" x="34" y="312" width="46" height="46"/>
+    <use href="#tk-empty" x="97" y="312" width="46" height="46"/>
+    <use href="#tk-heart" x="160" y="312" width="46" height="46"/>
+    <rect x="18" y="358" width="204" height="13" rx="3" fill="#B98A5E" stroke="#3B2F2A" stroke-width="2.5"/>
+  </g>
+  <g>
+    <rect x="10" y="440" width="220" height="34" rx="17" fill="#8E6642" stroke="#3B2F2A" stroke-width="2.5"/>
+    <g fill="#B98A5E" stroke="#3B2F2A" stroke-width="2"><circle cx="30" cy="457" r="7"/><circle cx="210" cy="457" r="7"/></g>
+    <path d="M48 457h144" stroke="#3B2F2A" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+    <use href="#tk-diamond" x="46" y="402" width="40" height="40"/>
+    <use href="#tk-star" x="150" y="402" width="40" height="40"/>
+    <path d="M178 400C222 345 226 245 192 207" fill="none" stroke="#3B2F2A" stroke-width="2.5" stroke-dasharray="6 5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+  </g>
+</svg></div></div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="play">
+    <div class="wrap">
+      <span class="label">How it plays</span>
+      <h2 id="play">Three moves, endless little decisions</h2>
+      <div class="steps">
+        <div class="step">
+          <svg viewBox="0 0 160 74" aria-hidden="true">
+            <rect x="4" y="46" width="152" height="24" rx="12" fill="#8E6642" stroke="#3B2F2A" stroke-width="2.5"/>
+            <path d="M24 58h112" stroke="#3B2F2A" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round"/>
+            <use href="#tk-ring" x="22" y="12" width="36" height="36"/>
+            <use href="#tk-star" x="104" y="12" width="36" height="36"/>
+            <path d="M66 32h26" stroke="#3B2F2A" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+          </svg>
+          <h3>Grab from the belt</h3>
+          <p>Fresh stock keeps rolling in. Drag it or tap it onto a shelf.</p>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 160 74" aria-hidden="true">
+            <use href="#tk-star" x="12" y="12" width="40" height="40"/>
+            <use href="#tk-star" x="60" y="12" width="40" height="40"/>
+            <use href="#tk-star" x="108" y="12" width="40" height="40"/>
+            <rect x="4" y="54" width="152" height="12" rx="3" fill="#B98A5E" stroke="#3B2F2A" stroke-width="2.5"/>
+            <g stroke="#3B2F2A" stroke-width="2.5" stroke-linecap="round"><path d="M32 6v-4M80 6v-4M128 6v-4M6 18l-4-2M154 18l4-2"/></g>
+          </svg>
+          <h3>Match three</h3>
+          <p>Line up three of the same item to clear them. Chain clears for a Rush combo.</p>
+        </div>
+        <div class="step">
+          <svg viewBox="0 0 160 74" aria-hidden="true">
+            <rect x="20" y="4" width="120" height="50" rx="14" fill="#FFF8EC" stroke="#3B2F2A" stroke-width="2.5"/>
+            <path d="M70 53l10 14l10-14" fill="#FFF8EC" stroke="#3B2F2A" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M71 52h18" stroke="#FFF8EC" stroke-width="4"/>
+            <use href="#tk-heart" x="34" y="13" width="32" height="32"/>
+            <use href="#tk-diamond" x="72" y="13" width="32" height="32"/>
+            <path d="M112 29l6 6l12-13" fill="none" stroke="#3FA66B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3>Serve the counter</h3>
+          <p>Fill each customer's order before they lose patience, and they tip you for it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="fair">
+    <div class="wrap fair">
+      <div>
+        <span class="label">Fair by design</span>
+        <h2 id="fair">Play it your way</h2>
+        <p>Every item has its own shape and symbol as well as its colour, so the whole game works for colourblind players too.</p>
+      </div>
+      <ul>
+        <li>No ads in the middle of a level.</li>
+        <li>No level timer and no energy system.</li>
+        <li>Shelves jammed? You get a revive to keep going.</li>
+        <li>Plays offline.</li>
+        <li>Earn stars to renovate your shop: a new counter, awning, floor and signs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="shots">
+    <div class="wrap">
+      <span class="label">Screenshots</span>
+      <h2 id="shots">From the shop floor</h2>
+      <!-- SCREENSHOT SLOTS: one figure per Play screenshot, same order and captions as
+           RestockRush Docs/Store/metadata/android/en-US/screenshot_captions.txt.
+           When WP-20a capture exists, put the files in /restockrush/media/ and replace each
+           .slot div with <img src="/restockrush/media/shot-0N.jpg" alt="..." loading="lazy" width="1080" height="2340">. -->
+      <div class="shots" tabindex="0" aria-label="Screenshots, scroll sideways for more">
+        <figure><div class="phone"><div class="screen slot" style="background:#A9BFA0"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-star"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Sort the delivery belt</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#EAD7A6"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-heart"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Fill customer orders</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#9CC3E0"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-ring"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Chain clears for a Rush combo</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#F1E6D2"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-diamond"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Renovate your shop</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#A9BFA0"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-star"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Open new stores</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#EAD7A6"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-heart"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Boosters for tricky shelves</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#9CC3E0"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-ring"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>No level timer. No mid-level ads.</figcaption></figure>
+        <figure><div class="phone"><div class="screen slot" style="background:#F1E6D2"><svg class="slot-token" viewBox="0 0 40 40" aria-hidden="true"><use href="#tk-diamond"/></svg><span class="slot-tag">Screenshot soon</span></div></div><figcaption>Hard levels, bigger rewards</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="links-row">
+        <a href="/support/"><strong>Support</strong><span>Questions, lost progress, purchases and data requests.</span></a>
+        <a href="/restockrush/privacy/"><strong>Privacy policy</strong><span>What the game collects and the choices you have.</span></a>
+        <a href="/press/"><strong>Press kit</strong><span>Fact sheet, description and media for coverage.</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 High Water Designs LLC</p>
+    <nav aria-label="Footer">
+      <a href="/restockrush/">Restock Rush</a>
+      <a href="/support/">Support</a>
+      <a href="/press/">Press</a>
+      <a href="/restockrush/privacy/">Privacy</a>
+      <a href="mailto:support@highwaterdesigns.com">support@highwaterdesigns.com</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
