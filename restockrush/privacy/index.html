@@ -6,29 +6,32 @@
 <title>Restock Rush Privacy Policy</title>
 <meta name="description" content="How the Restock Rush mobile game collects, uses and shares information.">
 <style>
-  :root { --bg:#ffffff; --fg:#1f2328; --muted:#59636e; --line:#d1d9e0; --accent:#0b6bcb; --warn-bg:#fff4ce; --warn-fg:#5c4400; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9198a1; --line:#30363d; --accent:#4493f8; --warn-bg:#3b2e00; --warn-fg:#f2d675; }
-  }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 4px; }
-  h2 { font-size:1.25rem; margin:36px 0 8px; padding-top:12px; border-top:1px solid var(--line); }
-  h3 { font-size:1.05rem; margin:20px 0 6px; }
-  p, li { max-width:70ch; }
-  a { color:var(--accent); }
-  .meta { color:var(--muted); margin:0 0 24px; }
-  .draft { background:var(--warn-bg); color:var(--warn-fg); padding:12px 14px; border-radius:8px; margin-bottom:24px; }
+  #main { padding-top:40px; padding-bottom:56px; }
+  .meta { opacity:.75; margin:0 0 24px; }
   .table-wrap { overflow-x:auto; }
   table { border-collapse:collapse; width:100%; font-size:.95rem; }
-  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid rgba(0,0,0,.12); }
   th { font-weight:600; }
-  nav ol { padding-left:20px; }
 </style>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/baloo2-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+<meta name="theme-color" content="#FFF8EC">
 </head>
 <body>
-<main>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/img/mark.svg" width="26" height="40" alt=""><span>High Water Designs</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/restockrush/">Restock Rush</a>
+      <a href="/support/">Support</a>
+      <a href="/press/">Press</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap prose">
 
 
 <h1>Restock Rush Privacy Policy</h1>
@@ -172,5 +175,17 @@
 Raleigh, NC 27609, United States<br>
 Email: <a href="mailto:support@highwaterdesigns.com">support@highwaterdesigns.com</a></p>
 </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; 2026 High Water Designs LLC<br>3064 Wake Forest Road #1095, Raleigh, NC 27609, United States</p>
+    <nav aria-label="Footer">
+      <a href="/restockrush/">Restock Rush</a>
+      <a href="/support/">Support</a>
+      <a href="/press/">Press</a>
+      <a href="/restockrush/privacy/">Privacy</a>
+      <a href="mailto:support@highwaterdesigns.com">support@highwaterdesigns.com</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
