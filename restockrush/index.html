@@ -12,6 +12,14 @@
 <meta property="og:title" content="Restock Rush: shop sort puzzle for Android">
 <meta property="og:description" content="Sort goods from the delivery belt, match three to clear, and fill every customer's order. No ads in the middle of a level, no level timer, no energy.">
 <meta property="og:type" content="website">
+<!-- OG/TWITTER IMAGES: absolute URLs on the github.io address until DNS moves; switch to https://highwaterdesigns.com then. -->
+<meta property="og:image" content="https://high-water-designs-llc.github.io/restockrush/og-restockrush.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Restock Rush: a shop sort puzzle for Android">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://high-water-designs-llc.github.io/restockrush/og-restockrush.png">
+<meta name="twitter:image:alt" content="Restock Rush: a shop sort puzzle for Android">
 <meta name="theme-color" content="#FFF8EC">
 </head>
 <body class="rr">
@@ -48,6 +56,10 @@
                "Get it on Google Play" badge (https://play.google.com/intl/en_us/badges/) linking to
                https://play.google.com/store/apps/details?id=<package> . Badge rules: don't recolour or crop it. -->
           <span class="btn" aria-disabled="true" id="store-badge">Coming soon on Google Play</span>
+          <!-- PRE-REGISTER SLOT: once Play pre-registration is open, set href to the Play listing URL
+               (https://play.google.com/store/apps/details?id=<package>), remove the hidden attribute,
+               and remove the "Coming soon" span above. -->
+          <a class="btn" id="preregister" href="#" hidden>Pre-register on Google Play</a>
           <a class="btn ghost" href="/press/">Press kit</a>
         </div>
         <p class="store-note">Free to play, with ads between levels and optional in-app purchases.</p>
@@ -152,7 +164,8 @@
     </div>
   </section>
 
-  <section class="section" aria-labelledby="shots">
+  <!-- Hidden until real captures exist (FR-17): remove the hidden attribute when the slots below hold screenshots. -->
+  <section class="section" aria-labelledby="shots" hidden>
     <div class="wrap">
       <span class="label">Screenshots</span>
       <h2 id="shots">From the shop floor</h2>

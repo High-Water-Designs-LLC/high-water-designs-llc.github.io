@@ -17,7 +17,8 @@ Fonts are self-hosted, so the site sets no cookies and sends nothing to Google.
 | `/support/` | Player support and FAQ, data deletion (`#delete-data`) | this repo |
 | `/press/` | Press kit | this repo |
 | `/404.html` | Not-found page | this repo |
-| `/assets/` | `css/site.css`, `fonts/` (Fredoka, Baloo 2, OFL licences beside them), `img/mark.svg` | this repo |
+| `/assets/` | `css/site.css`, `fonts/` (Fredoka, Baloo 2, OFL licences beside them), `img/mark.svg`, `img/og-studio.png` (link preview) | this repo |
+| `/restockrush/og-restockrush.png` | Link preview image for the game and press pages (1200x630) | this repo |
 
 Every page carries the same header and footer; change them on every page.
 
@@ -37,7 +38,8 @@ Search the HTML for these comments:
 
 - `STORE BADGE` (`/restockrush/`): swap in the official "Get it on Google Play" badge once the listing is live.
 - `TRAILER SLOT` (`/restockrush/`): the WP-20a capture video, in `/restockrush/media/`.
-- `SCREENSHOT SLOTS` (`/restockrush/`): 8 portrait shots, same order and captions as the Play listing.
+- `SCREENSHOT SLOTS` (`/restockrush/`): 8 portrait shots, same order and captions as the Play listing. The section is `hidden` until then.
+- `PRE-REGISTER SLOT` (`/restockrush/`): a hidden button for the Play pre-registration link.
 - `MEDIA SLOTS` (`/press/`): trailer, screenshots, key art, logos, icon, in `/press/media/`.
 - Mailing address: in every page footer and the press fact sheet. Change all of them together if it moves.
 
@@ -66,7 +68,11 @@ domain that still shows the old site. The steps below do it in the right order.
 
    **Leave every MX record, every TXT record (SPF `v=spf1`, DKIM, `_dmarc`, verification codes) and any mail host
    such as `mail`, `autodiscover` or `webmail` exactly as they are.** Email keeps working because it uses only those.
-3. Repo Settings > Pages > Custom domain: `highwaterdesigns.com` > Save (GitHub commits the `CNAME` file).
+3. In the same PR as the switch, change every `https://high-water-designs-llc.github.io` in `robots.txt`,
+   `sitemap.xml`, the `og:image`/`twitter:image` tags on every page and the press fact sheet's Website row to
+   `https://highwaterdesigns.com` (`grep -rn high-water-designs-llc.github.io .`). Until DNS moves they must not
+   point at highwaterdesigns.com, which still serves another site.
+4. Repo Settings > Pages > Custom domain: `highwaterdesigns.com` > Save (GitHub commits the `CNAME` file).
    When the DNS check passes, tick **Enforce HTTPS** (the certificate can take up to an hour).
 
 If the domain's nameservers belong to the old website builder (Squarespace, Wix, GoDaddy Website Builder and similar),
