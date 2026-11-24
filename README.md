@@ -39,7 +39,7 @@ Search the HTML for these comments:
 - `TRAILER SLOT` (`/restockrush/`): the WP-20a capture video, in `/restockrush/media/`.
 - `SCREENSHOT SLOTS` (`/restockrush/`): 8 portrait shots, same order and captions as the Play listing.
 - `MEDIA SLOTS` (`/press/`): trailer, screenshots, key art, logos, icon, in `/press/media/`.
-- Postal address: none on the site yet. Add it to the footer when Billy supplies the business address.
+- Mailing address: in every page footer and the press fact sheet. Change all of them together if it moves.
 
 ## Connecting highwaterdesigns.com
 
